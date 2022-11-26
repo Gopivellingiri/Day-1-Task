@@ -1,0 +1,55 @@
+
+before knowing Difference between HTTP/1.1 vs HTTP/2 we should know about what HTTP is..
+
+what is HTTP?
+The Hypertext Transfer Protocol, or HTTP, is an application protocol that has been the de facto standard for communication on the World Wide Web since its invention in 1989. From the release of HTTP/1.1 in 1997 until recently, there have been few revisions to the protocol. But in 2015, a reimagined version called HTTP/2 came into use, which offered several methods to decrease latency, especially when dealing with mobile platforms and server-intensive graphics and videos.
+
+Difference between HTTp/1.1 and HTTP/2
+HTTP/1.1 :
+
+Previously, HTTP/1.1 was the major version of HTTP network protocol used by the World Wide Web, implemented across clients and servers.
+
+That worked well for 15 years. But as modern day applications and websites evolved and the amount of data to be loaded on a single page increased, the shortcomings of HTTP/1.1 became more prominent.
+
+HTTP/2 :
+HTTP/2 is the second version of HTTP with most of the shortcomings of its predecessor addressed in it. It has come with advancements in efficiency, speed, and security. Till the date, HTTP/2 is supported on almost all popular web browsers, such as Chrome, Firefox, Internet Explorer, and Safari.
+    
+HTTP/1.1:
+client and server machines’ interaction:
+   * The client (browser) has to send a request to the server using the   method (GET/POST).
+   * Server responds with the requested resource, for example – image, alongside the status of what it did to the client’s request.
+
+it has only One Open Request Per Connection:
+HTTP/1.1 practically allows only one outstanding request per TCP connection
+
+For example – If a request at the queue head cannot retrieve its required resources, it can block all requests behind it. This phenomenon is called head-of-line blocking (HOL blocking). 
+
+HTTP/2:
+Allows using same TCP connection for multiple parallel requests, Multiplexed, instead of ordered.
+HTTP/2 developers introduced a binary framing layer. This layer partitions requests and responses in tiny data packets and encodes them. Due to this, multiple requests and responses become able to run parallelly with HTTP/2 and chances of HOL blocking are bleak. 
+
+Compression:
+compressions algorithms must be used to reduce the size of HTTP messages that travels between the machines.
+
+HTTP/1.1
+HTTP/1.x uses formats like gzip to compress the data transferred in the messages.the header component of the message is always sent as plain text. Though the header itself is small, it gets larger due to the use of cookies or an increased number of requests.
+
+HTTP/2
+HTTP/2 uses HPACK compression to decrease the average size of the header. This compression program encodes the header metadata using Huffman coding, which significantly reduces its size as a result.
+
+Adavantages of HTTP/2
+  * All modern browsers support HTTP/2 over HTTPS with the SSL certificate installation. To open HTTPS capable invisible proxy ports on every relevant port, OWASP ZAP or its alternatives could be used.
+
+  * HTTP/2 supports full multiplexing for requests as well as responses over a single TCP connection. Due to these capabilities, lower page load times are achieved by removing needless latency and improving the overall capacity of network alongside its availability.
+
+  * The HTTP/2’s ability to transmit more data per client-server communication cycle greatly improves web performance. As a result, increased user satisfaction, better SEO, greater productivity, growing userbase, and improved sales figures can be achieved.
+
+  * Features, such as server push, stream dependency and prioritizing, header compression, and binary format layer, have improved network utilization as the core advantage.
+
+Disadvantages of HTTP/2
+  * The cookie security failure is still not addressed in HTTP/2 like its precursor. Cookies are .txt files containing client data obtained by the server and website. However, these cookies may get stolen or tampered with by hackers, who can access personal user data, even without passwords.
+  * For client machines operating on a slow network, data packets drop bit by bit, and the network quality gets degraded to a single HTTP/2 connection. Due to this, the entire process slows down, thereby blocking a lot of data transfer.
+  * While HTTP/2 mitigated the effects of HOL blocking in its predecessor, TCP-level block still causes problems.
+
+  Conclusion:
+  Certainly, the tech world is rapidly evolving with each passing year, which needs advanced technologies every now and then. HTTP/3 is the upcoming internet protocol developed to fix the shortcomings of its predecessor. However, there is so much left to do, and HTTP/2 is not going away any time soon.

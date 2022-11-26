@@ -1,0 +1,53 @@
+Objects:
+
+In simple terms. “A JavaScript object is a collection of named values having state and behavior (properties and method)”.
+for example. A cup is an object, with properties. A cup has a color, a design, weight, a material it is made of, etc. The same way, JavaScript objects can have properties, which define their characteristics.
+
+Another example is All cars have the same properties, but the property values differ from car to car. All cars have the same methods, but the methods are performed at different times.
+
+Let’s have an example of Mercedes and list out it properties(features);
+
+var car = "Mercedes";
+
+Objects are variables too. But objects can contain many values.
+
+var car = {Make: “Mercedes”, Model: “C-Class”, Color: “White”, Fuel: Diesel, Weight: “850kg”, Mileage: “8Kmpl”, Rating: 4.5};
+
+The values are written as name:value pairs (name and value separated by a colon).
+
+Syntax:
+ <object-name> = {key1: value1, key2: value2,... keyN: valueN};
+
+Object Properties:
+The name:values pairs (in JavaScript objects) are called properties.
+var car = {Make: “Mercedes”, Model: “C-Class”, Color: “White”, Fuel: Diesel, Weight: “850kg”,Mileage: “8Kmpl”, Rating: 4.5};
+
+Example => property = Make, property values = "Mercedes"
+
+The syntax for adding a property to an object is :
+ObjectName.ObjectProperty = propertyValue;
+
+The syntax for deleting a property from an object is:
+delete ObjectName.ObjectProperty;
+
+The syntax to access a property from an object is:
+
+objectName.property        // Car.Make
+
+           //or
+
+objectName["property”]    // Car["Make"]
+
+          //or
+
+
+objectName[expression]   // x = "Make"; Car[x]
+
+Object Methods:
+Let’s assume to start the car there will be a mechanical functionality.
+An object method is an object property containing a function definition.
+
+function(){return ignition.on}
+and so similar is to stop/brake/headlights on & off, etc.
+
+So, Conclusion and simple definition for Java Script Object methods is “Methods are actions that can be performed on objects.”.
